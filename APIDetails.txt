@@ -1,0 +1,33 @@
+* Authentication (JWT) *
+
+Signup User:
+    Url: "/users/register"
+    PayloadType: JSON
+    Payload: {
+        "email": "ali.dev178@gmail.com",
+        "password": "a12345",
+        "passwordCheck": "a12345",
+        "display_name": "ali"
+    }
+
+Login User:
+    Url: "/users/login"
+    PayloadType: JSON
+    Payload: {
+        "email": "ali.dev178@gmail.com",
+        "password": "a12345"
+    }
+
+Delete User:
+    Url: "/users/delete"
+    PayloadType: Header
+    Payload: {
+        "x-auth-token" : <token>
+    }
+
+Check Token Validity:
+    Url: "/users/tokenIsValid"
+    PayloadType: Header
+    Payload: {
+        "x-auth-token" : <token>
+    }
